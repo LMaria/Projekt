@@ -1,10 +1,27 @@
-input, select{
-         width:100%;
-         box-sizing:border-box;
-         }
-         .t2rn {
-         color:red;
-         }
-
-
-       
+﻿select, input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.t2rn {
+    color: red;
+}
+#menu {
+    text-align: right;
+    margin-top: 60px;
+    background: skyblue;
+}
+ul {
+    margin: 0px;
+    list-style: none;
+   
+}
+ li {
+    display: inline-block;
+    float: right;
+    width: 15%;
+    background: skyblue;
+   
+}
+li a {
+    display: inline-block;
+}

@@ -1,24 +1,15 @@
-<!doctype HTML>
-<html>
-   <head>
-      <title>Logi sisse</title>
-      <meta charset="utf-8">
-      <style>
-   
-      </style>
-   </head>
-   <body>
+<div>
       <h3>Logi sisse</h3>
       
-         <form id="logi" method="POST" action="?page=login" >
+         <form id="logi"  action="?page=login" method="POST">
             <table>
                <tr>
                   <td>Kasutajanimi</td>
                   <td>
-                     <input type="text" name="nimi" placeholder="kasutajanimi">
+                    <input type="text" name="kasutaja" placeholder="kasutajanimi">
                   </td>
                </tr>
-               <tr>
+                  <tr>
                   <td>Parool</td>
                   <td>
                      <input type="password" name="parool" placeholder="parool">
@@ -29,6 +20,15 @@
                <button type="submit">Valmis</button>
             </p>
          </form>
-     
-   </body>
-</html>
+         
+  <?php if (isset($errors)):?>
+
+		<?php foreach($errors as $e):?>
+
+			<div style="color:red;"><?php echo htmlspecialchars($e); ?></div>
+
+		<?php endforeach;?>
+
+	<?php endif;?>
+
+</div>

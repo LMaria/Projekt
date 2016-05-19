@@ -1,14 +1,6 @@
-<!doctype HTML>
-<html>
-   <head>
-      <title>Registreeru</title>
-      <meta charset="utf-8">
-      <style>
-      </style>
-   </head>
-   <body>
+
       <h3>Registreeru</h3>
-      <form id="rega" method="POST" action="?page=registreeri" >
+      <form id="rega" method="POST" action="?page=registreeru" >
          <table>
             <tr>
                <td>Soovitud kasutajanimi</td>
@@ -16,22 +8,22 @@
                   <input type="text" name="nimi" placeholder="kasutajanimi">
                </td>
             </tr>
-            <tr>
+               <tr>
                <td>E-posti aadress</td>
                <td>
-                   <input type="email" name="email"> 
+                  <input type = "text" name = "mail">
                </td>
-            </tr>
+              </tr>
                <tr>
                <td>Parool</td>
                <td>
-                  <input type="password" name="parool" placeholder="parool">
+                  <input type="password" name="parool1" placeholder="parool">
                </td>
             </tr>
             <tr>
                <td>Korda parooli</td>
                <td>
-                  <input type="password" name="parool">
+                  <input type="password" name="parool2">
                </td>
             </tr>
          </table>
@@ -39,5 +31,12 @@
             <button type="submit">Valmis</button>
          </p>
       </form>
-   </body>
-</html>
+      <?php if (isset($errors)):?>
+	
+	<?php foreach($errors as $e):?>
+	
+		<div style="color:red;"><?php echo htmlspecialchars($e); ?></div>
+	
+	<?php endforeach;?>
+
+	<?php endif;?>
