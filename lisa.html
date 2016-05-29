@@ -1,6 +1,6 @@
  <?php require_once('head.html');?>     
       <h3>Lisa auto</h3>
-      <form id="lisamine" method="POST" action="?page=lisa" >
+      <form id="lisamine" method="POST" action="?page=lisa" enctype="multipart/form-data">
          <table>
             <tr>
                <td>Mark <span class= t2rn>*</span></td>
@@ -97,13 +97,13 @@
             <tr>
                <td>Telefoninumber <span class= t2rn>*</span><br>(ei ole avalikult nähtav)</td>
                <td>
-                  <input type="text" name="asukoht">
+                  <input type="text" name="tel">
                </td>
             </tr>
             <tr>
                <td>Pilt <span class= t2rn>*</span></td>
                <td>
-                  <input type="file" name="pilt"/>  
+                  <input type="file" name="pilt">  
                </td>
             </tr>
          </table>
@@ -113,4 +113,14 @@
             <button type="submit">Lisa</button>
          </p>
       </form>
+       <?php if (isset($errors)):?>
+
+		<?php foreach($errors as $e):?>
+
+			<div style="color:red;"><?php echo htmlspecialchars($e); ?></div>
+
+		<?php endforeach;?>
+
+	<?php endif;?>
+
 <?php require_once('foot.html');?>

@@ -1,0 +1,6 @@
+﻿CREATE TABLE IF NOT EXISTS `L__kasutajad` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `nimi` varchar(50) NOT NULL,
+  `parool` varchar(50) NOT NULL,
+  `email` varchar(50)
+);

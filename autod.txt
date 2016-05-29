@@ -1,0 +1,22 @@
+﻿CREATE TABLE IF NOT EXISTS `L__autod` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `mark` varchar(100) NOT NULL,
+  `mudel` varchar(100) NOT NULL,
+  `aasta` int(4) NOT NULL,
+  `kere` varchar(100),
+  `kW` int(11),
+  `värv` varchar(100),
+  `käigukast` varchar(50),
+  `kütus` varchar(100),
+  `läbisõit`int(10),
+  `hind` int(10) NOT NULL,
+  `tel` int(20) NOT NULL,
+  `pilt` varchar(100) NOT NULL
+      
+);
+
+INSERT INTO `L__autod` (`id`, `mark`, `mudel`, `aasta`, `kere`, `kW`, `värv`, 
+                        `käigukast`, `kütus`, `läbisõit`, `hind`,`tel`,`pilt`) VALUES
+(1, 'Ford', 'Focus', 2015, 'universaal', 77, 'sinine', 'automaat', 'bensiin', 10, 40, 7776542,'pildid/focus.jpg'),
+(null, 'Subaru', 'Impreza', 2015, 'sedaan',96, 'sinine', 'manuaal', 'bensiin', 10000, 20, 77765,'pildid/impreza.jpg'),
+(null, 'Mitsubishi', 'Lancer', 2016, 'sedaan', 81, 'hõbe', 'manuaal', 'bensiin', 2000, 15, 7776543,'pildid/lancer.jpg');

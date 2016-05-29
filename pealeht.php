@@ -17,12 +17,14 @@ switch($page){
 		logi_sisse();
 	break;
 	case "lisa":
-		include("lisa.html");
+		lisa_auto();
 	break;
 	case "registreeru":
 		registreeru();
 	break;
-	
+	case "autod":
+	    kuva_autod();
+	    break;
 	default:
 		include_once("logi_sisse.html");
 	break;
