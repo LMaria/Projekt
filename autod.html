@@ -1,61 +1,62 @@
+
 <div id="autod">
-<div id= "kuva"> 
-      <img src="<?php echo $val["pilt"];?>" alt="<?php echo $val[pilt]["alt"];?>" height="200" />
-   </div> 
+
+
    <div id="info">
-<form id="valitud" method="POST" action="?page=bron">
-         <table>
+         <form id= " valitud"method="POST" action= "?page=bron">
+         <table id= "omadused">
             <tr>
-               <td>Mark: </td>
-               <td><?php echo $val['mark'];?></td>
+               <th>Mark: </th>
+               <td colspan="2"><?php echo $val['mark'];?></td>
             </tr>
              <tr>
-               <td>Mudel: </td>
-               <td><?php echo $val['mudel'];?></td>
+               <th>Mudel: </th>
+               <td colspan="2"><?php echo $val['mudel'];?></td>
             </tr>
              <tr>
-               <td>Aasta: </td>
-               <td><?php echo $val['aasta'];?></td>
+               <th>Aasta: </th>
+               <td colspan="2"><?php echo $val['aasta'];?></td><td></td>
             </tr>
             <tr>
-               <td>Võimsus: </td>
-               <td><?php echo $val['kW'];?></td>
-               <td> kW</td>
+               <th>Võimsus: </th>
+               <td colspan="2"><?php echo $val['kW'];?>&nbsp;&nbsp;&nbsp;kW</td>
             </tr>
             <tr>
-               <td>Värv: </td>
-               <td><?php echo $val['värv'];?></td>
+               <th>Värv: </th>
+               <td colspan="2"><?php echo $val['värv'];?></td><td></td>
             </tr>
              <tr>
-               <td>Käigukast: </td>
-               <td><?php echo $val['käigukast'];?></td>
+               <th>Käigukast: </th>
+               <td colspan="2"><?php echo $val['käigukast'];?></td><td></td>
             </tr>
              <tr>
-               <td>Kütus: </td>
-               <td><?php echo $val['kütus'];?></td>
+               <th>Kütus: </th>
+               <td colspan="2"><?php echo $val['kütus'];?></td><td></td>
             </tr>
              <tr>
-               <td>Läbisõit: </td>
-               <td><?php echo $val['läbisõit'];?></td> 
-               <td> km</td> 
+               <th>Läbisõit: </th>
+               <td colspan="2"><?php echo $val['läbisõit'];?>&nbsp;&nbsp;&nbsp;km</td> 
             </tr>
             <tr>
-               <td>Hind: </td>
-               <td><?php echo $val['hind'];?></td>
-               <td> EUR/päev</td>
+               <th>Hind: </th>
+               <td colspan="2"><?php echo $val['hind'];?>&nbsp;&nbsp;&nbsp;EUR/päev</td>
             </tr>
-            <tr>
-               <td>Lisainfo: </td>
-            </tr>
-                   
-      </table>      
       
-       </form>        
-                          
+         </table>
+         <input type="hidden" name="id" value="<?php echo $val['id'];?>">  
+
+               <button type= "submit" id="broneeri">Broneeri</button> 
+                
+               </form>
+       </div>   
+       
+                
     
-      <button type="submit">Broneeri</button>
- </div>     
-    </div>
+ <div id= "kuva"> 
+      <img src="<?php echo $val["pilt"];?>" alt="<?php echo $val[pilt]["alt"];?>" height="250"  /><br>
+      Lisainfo: 
+   </div>      
+</div>
    
    
    

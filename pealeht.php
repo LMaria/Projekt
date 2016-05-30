@@ -25,6 +25,9 @@ switch($page){
 	case "autod":
 	    kuva_autod();
 	    break;
+	case "bron":
+	   include("broneering.html");;
+	    break;    
 	default:
 		include_once("logi_sisse.html");
 	break;
