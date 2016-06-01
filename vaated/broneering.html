@@ -1,0 +1,20 @@
+<div id="broneering">
+   <div id="aeg">
+      <form id="valik" method="POST" action="">
+         Algus: <input type="text" id="algus" name= "algus">   Lõpp: <input type="text" id="l6pp" name="l6pp">
+         <input type="hidden" name="id" value="<?php echo $_POST['autoId'];?>">
+         <button type="submit" id="valmis" name="valmis">Valmis</button>
+      </form>
+      <?php if (isset($errors)):?>
+      <?php foreach($errors as $e):?>
+      <div id="error"><?php echo htmlspecialchars($e); ?></div>
+      <?php endforeach;?>
+      <?php endif;?>
+   </div>
+   <div id="valitud">
+      Broneeri: <br><br>
+      <?php echo $_POST['valitudMark']; ?>&nbsp;
+      <?php echo $_POST['valitudMudel']; ?><br><br>
+      <img src=<?php echo $_POST['valitudPilt']; ?> alt="valitud" height="300" />
+   </div>
+</div>

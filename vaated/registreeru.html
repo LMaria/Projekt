@@ -1,0 +1,38 @@
+<h3>Registreeru</h3>
+<form id="rega" method="POST" action="?page=registreeru" >
+   <table>
+      <tr>
+         <td>Soovitud kasutajanimi</td>
+         <td>
+            <input type="text" name="nimi" placeholder="kasutajanimi">
+         </td>
+      </tr>
+      <tr>
+         <td>E-posti aadress</td>
+         <td>
+            <input type = "text" name = "mail">
+         </td>
+      </tr>
+      <tr>
+         <td>Parool</td>
+         <td>
+            <input type="password" name="parool1" placeholder="parool">
+         </td>
+      </tr>
+      <tr>
+         <td>Korda parooli</td>
+         <td>
+            <input type="password" name="parool2">
+         </td>
+      </tr>
+   </table>
+   <p>
+      <button type="submit">Valmis</button>
+   </p>
+</form>
+<?php if (isset($errors)):?>
+<?php foreach($errors as $e):?>
+<div style="color:red;"><?php echo htmlspecialchars($e); ?></div>
+<?php endforeach;?>
+<?php endif;?>
+
